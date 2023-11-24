@@ -80,7 +80,11 @@ const PageContacter = () => {
           userProperties.map((property) => (
             <li className="container" key={property.id}>
               <div>
-                <img className="images" src="Alaya-Beach.png" alt="" />
+                <img
+                  className="images"
+                  src="https://dubai-immo.com/wp-content/uploads/2022/02/Alaya-Beach.png"
+                  alt=""
+                />
               </div>
               <div>
                 <p>Nom de la propriété : {property.title}</p>

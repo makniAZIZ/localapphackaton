@@ -39,19 +39,19 @@ const pagedaccueil = () => {
         <div>
           <img
             className="image"
-            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+            src="https://dubai-immo.com/wp-content/uploads/2022/02/Alaya-Beach.png"
           />
         </div>
         <div>
           <img
             className="image"
-            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+            src="https://dubai-immo.com/wp-content/uploads/2022/02/Alaya-Beach.png"
           />
         </div>
         <div>
           <img
             className="image"
-            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+            src="https://dubai-immo.com/wp-content/uploads/2022/02/Alaya-Beach.png"
           />
         </div>
       </Carousel>
@@ -60,7 +60,11 @@ const pagedaccueil = () => {
           properties.map((property) => (
             <li className="container" key={property.id}>
               <div>
-                <img className="images" src="Alaya-Beach.png" alt="" />
+                <img
+                  className="images"
+                  src="https://dubai-immo.com/wp-content/uploads/2022/02/Alaya-Beach.png"
+                  alt=""
+                />
               </div>
               <div>
                 <p>Nom de la propriété : {property.title}</p>
