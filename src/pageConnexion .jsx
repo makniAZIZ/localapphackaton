@@ -1,11 +1,11 @@
 //page connexion
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toastUtils from "./toastUtils";
 function Connection() {
   // Creation de la variable d'etat qui va contenir la data recupéré du formulaire
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -36,7 +36,8 @@ function Connection() {
     );
     //data étant le tableaux de resultat correspondant à notre recherche
     let data = await response.json();
-    toastUtils("success", "vous etes bien inscrit");
+    toastUtils("success", "vous etes bien connecté");
+    navigate("/");
     console.log(data);
     localStorage.setItem("token", data.token);
   }
