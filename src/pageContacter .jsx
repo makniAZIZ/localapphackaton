@@ -78,12 +78,18 @@ const PageContacter = () => {
       <ul>
         {userProperties &&
           userProperties.map((property) => (
-            <li key={property.id}>
-              <p>Nom de la propriété : {property.title}</p>
-              <p>Description : {property.description}</p>
-              <p>Prix : {property.price}</p>
-              <p>Localisation : {property.location}</p>
-              {/* Ajoutez d'autres propriétés ici */}
+            <li className="container" key={property.id}>
+              <div>
+                <img className="images" src="Alaya-Beach.png" alt="" />
+              </div>
+              <div>
+                <p>Nom de la propriété : {property.title}</p>
+                <p>Description : {property.description}</p>
+                <p>Prix : {property.price}</p>
+                <p>Localisation : {property.location}</p>
+                <p>Email: {property.email}</p>
+                {/* Ajoutez d'autres propriétés ici */}
+              </div>
             </li>
           ))}
       </ul>

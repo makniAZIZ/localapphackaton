@@ -1,15 +1,15 @@
-// Pagecreer.jsx
 import { useState } from "react";
 import toastUtils from "./toastUtils";
-import "./Pagecree.css";
-
 function Pagecreer() {
+  // Creation de la variable d'etat qui va contenir la data recupéré du formulaire
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
 
+  //récupère les données rentrées dans le form
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,6 +18,7 @@ function Pagecreer() {
     }));
   };
 
+  //Function d'envoie de la data récup du form
   async function handleSubmit(e) {
     e.preventDefault();
     const requestOption = {
@@ -31,22 +32,24 @@ function Pagecreer() {
       "https://apihackaton1.osc-fr1.scalingo.io/users/register",
       requestOption
     );
+    //data étant le tableaux de resultat correspondant à notre recherche
     let data = await response.json();
-    toastUtils("success", "Vous êtes bien inscrit");
+    toastUtils("success", "vous etes bien inscrit");
     console.log(data);
     console.log(formData);
-    console.log("Bien inscrit");
+    console.log("Bien inscrit"); // {email: 'aziz.makni@gmail.com', password: 'sd'}
   }
 
   return (
-    <div className="container">
+    <>
       <div className="form-container">
+        {/* Au déclenchement du boutton S'inscrire CTA ca déclenche la function handleSumbit */}
         <form onSubmit={handleSubmit}>
-          <h2>Créer un compte</h2>
+          <h2>Créer un compte </h2>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">username</label>
             <input
-              type="text"
+              type="username"
               id="username"
               name="username"
               value={formData.username}
@@ -76,10 +79,22 @@ function Pagecreer() {
               required
             />
           </div>
-          <button type="submit">S'inscrire</button>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "orange",
+              color: "white",
+              padding: "10px",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+          >
+            s'inscrire
+          </button>
         </form>
       </div>
-    </div>
+    </>
   );
 }
 
