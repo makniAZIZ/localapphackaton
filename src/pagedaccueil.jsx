@@ -37,13 +37,22 @@ const pagedaccueil = () => {
     <div className="photo">
       <Carousel>
         <div>
-          <img className="image" src="Alaya-Beach.png" />
+          <img
+            className="image"
+            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+          />
         </div>
         <div>
-          <img className="image" src="Alaya-Beach.png" />
+          <img
+            className="image"
+            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+          />
         </div>
         <div>
-          <img className="image" src="Alaya-Beach.png" />
+          <img
+            className="image"
+            src="https://localapphackaton.vercel.app/Alaya-Beach.png"
+          />
         </div>
       </Carousel>
       <ul>
